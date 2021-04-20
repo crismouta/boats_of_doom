@@ -1,0 +1,30 @@
+body{
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    background: url(./assets/img/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -200px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#inputContainer {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: hsla(34, 24%, 51%, 0.767);
+    width: 200px;
+    height: 200px;
+}
+
+#textInput {
+    top: 12px;
+    position: absolute;
+    left: 7.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
