@@ -3,6 +3,12 @@ body{
     margin: 0;
 }
 
+.header-title {
+    color: hsl(34, 24%, 51%);
+    font-size: 50px;
+    margin: 25px;
+}
+
 .container{
     background: url(./assets/img/background2.jpg);
     background-size: cover;
@@ -14,8 +20,8 @@ body{
 
 #inputContainer {
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: -50px;
+    left: 900px;
     background-color: hsla(34, 24%, 51%, 0.767);
     width: 200px;
     height: 200px;
@@ -104,7 +110,7 @@ body{
     bottom: 50%;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .cannon {
         width: 60%;
     }
@@ -163,6 +169,5 @@ body{
         width: 750px;
         height: 100px;
     }
-
-        
+    
 }
