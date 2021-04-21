@@ -38,8 +38,11 @@ body{
 
 .cannon {
     width: 20%;
-    height: 20%;
+    transition: transform 0.1s;
+}
 
+.cannon:active{
+    transform: scale(1.2)
 }
 
 .boat1 {
@@ -99,4 +102,67 @@ body{
     position: absolute;
     left: 60%;
     bottom: 50%;
+}
+
+@media (min-width: 768px) {
+    .cannon {
+        width: 60%;
+    }
+
+    .boat1 {
+        width: 300px;
+        height: 300px;
+        bottom: 100%;
+        right: 100%;
+    }
+
+    .boatBlock1 {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+    }
+
+    .boat2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .boatBlock2 {
+        position: absolute;
+        left: 35%;
+        bottom: 22%;
+    }
+
+    .boat3 {
+        width: 40%;
+        height: 40%;
+    }
+
+    .boat5 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .boatBlock5 {
+        position: absolute;
+        left: 60%;
+        bottom: 32%;
+    }
+
+    #inputContainer {
+        top: 50px;
+        left: 50px;
+        width: 850px;
+        height: 1000px;
+    }
+
+    #textInput {
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        width: 750px;
+        height: 100px;
+    }
+
+        
 }
