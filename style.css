@@ -9,7 +9,7 @@ body{
     background-repeat: no-repeat;
     background-position: 0px -200px;
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
 }
 
 #inputContainer {
@@ -28,4 +28,141 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-3
+
+.cannonBlock {
+    position: absolute;
+    left: 4%;
+    bottom: 4%;
+
+}
+
+.cannon {
+    width: 20%;
+    transition: transform 0.1s;
+}
+
+.cannon:active{
+    transform: scale(1.2)
+}
+
+.boat1 {
+    left: 20%;
+    top: 20%;
+    width: 190px;
+    height: 190px;
+    
+} 
+
+.boatBlock1 {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    
+}
+
+.boat2 {
+    width: 180px;
+    height: 180px;
+}
+
+.boatBlock2 {
+    position: absolute;
+    left: 30%;
+    bottom: 30%;
+}
+
+.boat3 {
+    width: 170px;
+    height: 170px;
+}
+
+.boatBlock3 {
+    position: absolute;
+    left: 5%;
+    bottom: 30%;
+}
+
+.boat4 {
+    width: 180px;
+    height: 180px;
+}
+
+.boatBlock4 {
+    position: absolute;
+    left: 80%;
+    bottom: 30%;
+}
+
+.boat5 {
+    width: 130px;
+    height: 130px;
+}
+
+.boatBlock5 {
+    position: absolute;
+    left: 60%;
+    bottom: 50%;
+}
+
+@media (min-width: 768px) {
+    .cannon {
+        width: 60%;
+    }
+
+    .boat1 {
+        width: 300px;
+        height: 300px;
+        bottom: 100%;
+        right: 100%;
+    }
+
+    .boatBlock1 {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+    }
+
+    .boat2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .boatBlock2 {
+        position: absolute;
+        left: 35%;
+        bottom: 22%;
+    }
+
+    .boat3 {
+        width: 40%;
+        height: 40%;
+    }
+
+    .boat5 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .boatBlock5 {
+        position: absolute;
+        left: 60%;
+        bottom: 32%;
+    }
+
+    #inputContainer {
+        top: 50px;
+        left: 50px;
+        width: 850px;
+        height: 1000px;
+    }
+
+    #textInput {
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        width: 750px;
+        height: 100px;
+    }
+
+        
+}
