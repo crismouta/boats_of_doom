@@ -18,6 +18,7 @@ body{
     height: 130vh;
 }
 
+
 .inputContainer {
     position: relative;
     top: -50px;
@@ -36,6 +37,7 @@ body{
 }
 
 .cannonBlock {
+    left: 20px;
     position: absolute;
     left: 4%;
     bottom: 4%;
@@ -43,6 +45,7 @@ body{
 }
 
 .cannon {
+    z-index: 2;
     width: 20%;
     transition: transform 0.1s;
 }
