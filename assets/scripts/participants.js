@@ -1,0 +1,1 @@
+export let participantsList = ["David", "Diego", "Cris"]
