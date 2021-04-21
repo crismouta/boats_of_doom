@@ -18,7 +18,7 @@ body{
     height: 130vh;
 }
 
-#inputContainer {
+.inputContainer {
     position: relative;
     top: -50px;
     left: 900px;
@@ -110,7 +110,7 @@ body{
     bottom: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width:320px) {
     .cannon {
         width: 60%;
     }
@@ -155,7 +155,7 @@ body{
         bottom: 32%;
     }
 
-    #inputContainer {
+    .inputContainer {
         top: 50px;
         left: 50px;
         width: 850px;
