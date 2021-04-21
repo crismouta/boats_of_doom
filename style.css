@@ -18,7 +18,7 @@ body{
     height: 130vh;
 }
 
-#inputContainer {
+.inputContainer {
     position: relative;
     top: -50px;
     left: 900px;
@@ -27,7 +27,7 @@ body{
     height: 200px;
 }
 
-#textInput {
+.textInput {
     top: 12px;
     position: absolute;
     left: 7.5%;
@@ -155,14 +155,14 @@ body{
         bottom: 32%;
     }
 
-    #inputContainer {
+    .inputContainer {
         top: 50px;
         left: 50px;
         width: 850px;
         height: 1000px;
     }
 
-    #textInput {
+    .textInput {
         top: 50px;
         left: 50px;
         right: 50px;
