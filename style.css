@@ -27,7 +27,7 @@ body{
     height: 200px;
 }
 
-#textInput {
+.textInput {
     top: 12px;
     position: absolute;
     left: 7.5%;
@@ -162,7 +162,7 @@ body{
         height: 1000px;
     }
 
-    #textInput {
+    .textInput {
         top: 50px;
         left: 50px;
         right: 50px;
