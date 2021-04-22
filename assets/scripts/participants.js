@@ -1,1 +1,1 @@
-export let participantsList = ["David", "Diego", "Cris"]
+export let participantsList = ["David", "Diego", "Cris", "Snezhanna"]
