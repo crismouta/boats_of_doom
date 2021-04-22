@@ -10,6 +10,7 @@ body{
 }
 
 .container{
+    max-width: 1400px;
     background: url(./assets/img/background2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -113,9 +114,20 @@ body{
     bottom: 50%;
 }
 
-@media (max-width: 768px) {
+/* @media (min-width:320px) {
+
+    .header-title{
+        font-size: 100px;
+        margin: 0 160px;
+    }
+
+    .textInput {
+        font-size: 50px;
+        text-align: center;
+    }
     .cannon {
         width: 60%;
+        margin-bottom: -70px;
     }
 
     .boat1 {
@@ -159,10 +171,10 @@ body{
     }
 
     .inputContainer {
-        top: 50px;
+        top: 10px;
         left: 50px;
         width: 850px;
-        height: 1000px;
+        height: 750px;
     }
 
     .textInput {
@@ -174,3 +186,25 @@ body{
     }
     
 }
+
+@media (min-width:1400px) {
+    .header-title {
+        font-size: 50px;
+        margin: 25px;
+    }
+
+    .inputContainer {
+        position: relative;
+        top: -50px;
+        left: 1070px;
+        width: 300px;
+        height: 400px;
+    } 
+
+    .textInput {
+        font-size: 20px;
+        width: 250px;
+        height: 30px;
+        top: 12px;
+        left: 100px;
+    } */
