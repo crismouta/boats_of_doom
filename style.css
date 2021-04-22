@@ -3,6 +3,12 @@ body{
     margin: 0;
 }
 
+.header-title {
+    color: hsl(34, 24%, 51%);
+    font-size: 50px;
+    margin: 25px;
+}
+
 .container{
     background: url(./assets/img/background2.jpg);
     background-size: cover;
@@ -12,16 +18,17 @@ body{
     height: 130vh;
 }
 
-#inputContainer {
+
+.inputContainer {
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: -50px;
+    left: 900px;
     background-color: hsla(34, 24%, 51%, 0.767);
     width: 200px;
     height: 200px;
 }
 
-#textInput {
+.textInput {
     top: 12px;
     position: absolute;
     left: 7.5%;
@@ -30,6 +37,7 @@ body{
 }
 
 .cannonBlock {
+    left: 20px;
     position: absolute;
     left: 4%;
     bottom: 4%;
@@ -37,6 +45,7 @@ body{
 }
 
 .cannon {
+    z-index: 2;
     width: 20%;
     transition: transform 0.1s;
 }
@@ -149,18 +158,19 @@ body{
         bottom: 32%;
     }
 
-    #inputContainer {
+    .inputContainer {
         top: 50px;
         left: 50px;
         width: 850px;
         height: 1000px;
     }
 
-    #textInput {
+    .textInput {
         top: 50px;
         left: 50px;
         right: 50px;
         width: 750px;
         height: 100px;
     }
+    
 }
