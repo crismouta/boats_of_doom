@@ -22,7 +22,7 @@ body{
 .inputContainer {
     position: relative;
     top: -50px;
-    left: 900px;
+    left: 1100px;
     background-color: hsla(34, 24%, 51%, 0.767);
     width: 200px;
     height: 200px;
@@ -72,12 +72,13 @@ body{
 .boat2 {
     width: 180px;
     height: 180px;
+    
 }
 
 .boatBlock2 {
     position: absolute;
     left: 30%;
-    bottom: 30%;
+    bottom: 40%;
 }
 
 .boat3 {
