@@ -1,38 +1,30 @@
 import { participantsList } from './participants.js'
 
 const cannonButton = document.querySelector(".cannon")
-cannonButton.onclick = printName
 
-
-// Cuando hago click al cañón:
-// Selecciona un nombre aleatorio del array
-function selectFromArray(participantsList) {
-    let nameChosen = participantsList[Math.floor(Math.random() * participantsList.length)]
-    return nameChosen
+function functionPack() {
+    printRandomName()
+    deleteName()
+    consolelog()
 }
 
-// Borrar el nombre del array
-function deleteFromArray(participantsList, elemento) {
+/* function getRandomName() {
+    return Math.floor(Math.random() * participantsList.length)
+} */
 
-    return list
-}
+const getRandomName = Math.floor(Math.random() * participantsList.length)
 
-// Escribirlo en el h2
-function printName() {
-    let geth2 = document.querySelector(".result")
-    
+function printRandomName() {
+    const geth2 = document.querySelector(".result")
     geth2.innerHTML = ""
-    geth2.innerHTML = nameChosen
+    geth2.innerHTML = `${participantsList[getRandomName]}`
 }
 
-// Reset
-
-
-function getInputValue() {
-    let inputValue = document.getElementById("foodInput").value
-    foodList.push({name: inputValue})
-    console.log(foodList)
-    renderList()
+const deleteName = () => {
+    participantsList.splice(getRandomName, 1)
 }
 
-//console.log(nameChosen)
+cannonButton.onclick = functionPack
+function consolelog() {
+    console.log(participantsList)
+}

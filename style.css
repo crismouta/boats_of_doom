@@ -136,10 +136,10 @@ body{
 .boatBlock5 {
     position: absolute;
     left: 60%;
-    bottom: 50%;
+    bottom: 45%;
 }
 
-/* @media (min-width:320px) {
+/* @media (max-width:375px) {
 
     .header-title{
         font-size: 100px;
