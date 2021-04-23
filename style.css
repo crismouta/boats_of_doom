@@ -3,6 +3,14 @@ body{
     margin: 0;
 }
 
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: red;
+}
+
 .header-title {
     color: hsl(34, 24%, 51%);
     font-size: 50px;
@@ -22,8 +30,6 @@ body{
     position: absolute;
     left: 35%;
     bottom: 65%;
-}
-
 }
 
 .inputContainer {

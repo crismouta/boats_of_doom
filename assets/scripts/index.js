@@ -3,28 +3,35 @@ import { participantsList } from './participants.js'
 const cannonButton = document.querySelector(".cannon")
 
 function functionPack() {
-    printRandomName()
-    deleteName()
+    getRandomName()
+    //printRandomName()
+    //deleteName()
     consolelog()
 }
 
-/* function getRandomName() {
-    return Math.floor(Math.random() * participantsList.length)
-} */
+function getRandomName() {
+    let randomValue = Math.floor(Math.random() * participantsList.length)
+    const geth2 = document.querySelector(".result")
+    geth2.innerHTML = ""
+    geth2.innerHTML = `${participantsList[randomValue]}`
+    participantsList.splice(randomValue, 1)
+}
 
-const getRandomName = Math.floor(Math.random() * participantsList.length)
+//let getRandomName = Math.floor(Math.random() * participantsList.length)
 
 function printRandomName() {
     const geth2 = document.querySelector(".result")
     geth2.innerHTML = ""
-    geth2.innerHTML = `${participantsList[getRandomName]}`
+    geth2.innerHTML = `${participantsList[getRandomName()]}`
 }
 
-const deleteName = () => {
-    participantsList.splice(getRandomName, 1)
+function deleteName() {
+    participantsList.splice(getRandomName(), 1)
 }
 
-cannonButton.onclick = functionPack
 function consolelog() {
     console.log(participantsList)
 }
+
+cannonButton.onclick = functionPack
+
