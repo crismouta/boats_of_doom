@@ -18,7 +18,13 @@ body{
     width: 100vw;
     height: 130vh;
 }
+.result{
+    position: absolute;
+    left: 35%;
+    bottom: 65%;
+}
 
+}
 
 .inputContainer {
     position: relative;
