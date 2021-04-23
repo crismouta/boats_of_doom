@@ -25,7 +25,7 @@ body{
     top: -50px;
     left: 1100px;
     background-color: hsla(34, 24%, 51%, 0.767);
-    width: 200px;
+    width: 220px;
     height: 200px;
 }
 
@@ -33,6 +33,13 @@ body{
     top: 12px;
     position: absolute;
     left: 7.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttonInput {
+    top: 12px;
+    position: absolute;
+    left: 100%;
     margin-left: auto;
     margin-right: auto;
 }

@@ -12,7 +12,9 @@
                 </div>
             </header>
             <section class="inputContainer">
-                <input type="text" placeholder="Your name" class="textInput">
+                <input type="text" placeholder="Your name" class="textInput" id="inputText">
+                <button class="buttonInput" id="buttonText">Add</button>
+                <section id="container"></section>
                 <ul class="listName">
                 
                 </ul>
@@ -41,8 +43,14 @@
             <div class="boatBlock5">
                 <img class="boat5" src="./assets/img/boat.png" alt="Boat">
             </div>
+            <form id="myForm">
+                First name: <input type="text" name="fname"><br>
+                Last name: <input type="text" name="lname"><br><br>
+                <input type="button" onclick="myFunction()" >
+        
 
         </div>
+        
         <script type="module" src="assets/scripts/index.js"></script>
     </body>
 </html>
