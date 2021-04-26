@@ -4,9 +4,15 @@ const cannonButton = document.querySelector(".cannon")
 
 function functionPack() {
     getRandomName(participantsList)
+    fireBoat()
     //printRandomName()
     //deleteName()
     consolelog()
+}
+
+function fireBoat() {
+    let getBoat = document.querySelector(".boat2")
+    getBoat.src = "./assets/img/fireboat.png"
 }
 
 function getRandomName(lista) {

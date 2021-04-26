@@ -7,10 +7,6 @@ h1 {
     margin: 0;
 }
 
-h2 {
-    color: red;
-}
-
 .header-title {
     color: hsl(34, 24%, 51%);
     font-size: 50px;
@@ -30,7 +26,7 @@ h2 {
 .result{
     position: absolute;
     left: 35%;
-    bottom: 65%;
+    bottom: 180px;
 }
 
 .inputContainer {
@@ -102,10 +98,6 @@ h2 {
 .boat2 {
     width: 160px;
     height: 160px;
-}
-
-.boat2:active {
-    display: none;
 }
 
 .boatBlock2 {
