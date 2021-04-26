@@ -139,6 +139,11 @@ h1 {
     bottom: 45%;
 }
 
+#reset {
+    background-color: #6D5E49;
+    color: #FFFFFF;
+}
+
 /* @media (max-width:375px) {
 
     .header-title{
