@@ -1,8 +1,18 @@
 import { participantsList } from './participants.js'
 
-for (let item = 0; item < participantsList.length; item++) {
-    let getUl = document.querySelector(".listName")
-    getUl.innerHTML += `<li>${participantsList[item]}</li>`
+/*suma()
+function suma() {
+    let letras = 'abc'
+    let numeros = 4 + 10
+    return letras + ' Hola me llamo David ' + numeros
+}
+console.log(suma())
+
+document.querySelector(".header-title").innerHTML = suma()*/
+
+let getUl = document.querySelector(".listName")
+for (let index = 0; index < participantsList.length; index++) {
+    getUl.innerHTML += `<li>${participantsList[index]}</li>`
 }
 
 const cannonButton = document.querySelector(".cannon")
@@ -10,6 +20,7 @@ const cannonButton = document.querySelector(".cannon")
 function functionPack() {
     getRandomName(participantsList)
     fireBoat()
+    deleteName(participantsList)
     consolelog()
 }
 
@@ -20,15 +31,18 @@ function fireBoat() {
 
 function getRandomName(lista) {
     let randomValue = Math.floor(Math.random() * lista.length)
+    return randomValue
+}
+
+function deleteName(lista) {
     const geth2 = document.querySelector(".result")
+    const randomValue = getRandomName(lista)
     geth2.innerHTML = ""
     geth2.innerHTML = `${lista[randomValue]}`
     lista.splice(randomValue, 1)
-    for (let item = 0; item < lista.length; item++) {
-        let getUl = document.querySelector(".listName")
-        getUl.innerHTML = ""
-        getUl.innerHTML += `<li>${lista[item]}</li>`
-        
+    getUl.innerHTML = ""
+    for (let i = 0; i < lista.length; i++){
+        getUl.innerHTML += `<li>${lista[i]}</li>`
     }
 }
 
