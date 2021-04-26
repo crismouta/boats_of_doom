@@ -1,4 +1,6 @@
-import { participantsList } from './participants.js'
+import { participantsList2 } from './participants.js'
+const genesisList = participantsList2()
+let participantsList = participantsList2()
 
 /*suma()
 function suma() {
@@ -57,10 +59,11 @@ let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
 
 function functionReset() {
-    participantsList = ["Cris"]
-    participantsList = ["David S", "Diego", "Cris", "Snezhanna", "Abdulha", "David H", 
-    "Alexandra", "Andrés", "Andrea C", "Andrea S", "Gabriela", "Gabi", "Amr", "Anya", "Armando", 
-    "Berta", "Franco", "Jael", "Joan", "Jose Miguel", "Leah", "Martín", "Solomon", "Sergio", 
-    "Thierno"]
+    participantsList = genesisList
+    getUl.innerHTML = ""
+    for (let i = 0; i < participantsList.length; i++){
+        getUl.innerHTML += `<li>${participantsList[i]}</li>`
+    }
+    console.log(participantsList)
 }
 
