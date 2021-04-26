@@ -1,1 +1,4 @@
-export let participantsList = ["David", "Diego", "Cris", "Snezhanna", "sadf", "1", "2", "3", "4", "5", "6", "7", "macarrones"]
+export let participantsList = ["David S", "Diego", "Cris", "Snezhanna", "Abdulha", "David H", 
+"Alexandra", "Andrés", "Andrea C", "Andrea S", "Gabriela", "Gabi", "Amr", "Anya", "Armando", 
+"Berta", "Franco", "Jael", "Joan", "Jose Miguel", "Leah", "Martín", "Solomon", "Sergio", 
+"Thierno"]

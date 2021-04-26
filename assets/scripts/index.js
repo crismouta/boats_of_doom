@@ -3,28 +3,34 @@ import { participantsList } from './participants.js'
 const cannonButton = document.querySelector(".cannon")
 
 function functionPack() {
-    printRandomName()
-    deleteName()
+    getRandomName(participantsList)
+    fireBoat()
     consolelog()
 }
 
-/* function getRandomName() {
-    return Math.floor(Math.random() * participantsList.length)
-} */
+function fireBoat() {
+    let getBoat = document.querySelector(".boat2")
+    getBoat.src = "./assets/img/fireboat.png"
+}
 
-const getRandomName = Math.floor(Math.random() * participantsList.length)
-
-function printRandomName() {
+function getRandomName(lista) {
+    let randomValue = Math.floor(Math.random() * lista.length)
     const geth2 = document.querySelector(".result")
     geth2.innerHTML = ""
-    geth2.innerHTML = `${participantsList[getRandomName]}`
+    geth2.innerHTML = `${lista[randomValue]}`
+    lista.splice(randomValue, 1)
 }
 
-const deleteName = () => {
-    participantsList.splice(getRandomName, 1)
-}
-
-cannonButton.onclick = functionPack
 function consolelog() {
     console.log(participantsList)
 }
+
+cannonButton.onclick = functionPack
+
+for (let index = 0; index < participantsList.length; index++) {
+    let getUl = document.querySelector(".listName")
+    getUl.innerHTML += `<li>${participantsList[index]}</li>`
+}
+
+let getResetButton = document.getElementById()
+
