@@ -1,4 +1,5 @@
-import { participantsList } from './participants.js'
+import { participantsList2 } from './participants.js'
+let participantsList = participantsList2()
 
 /*suma()
 function suma() {
@@ -52,15 +53,14 @@ function consolelog() {
 
 cannonButton.onclick = functionPack
 
-
 let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
 
 function functionReset() {
-    participantsList = []
-    participantsList = ["David S", "Diego", "Cris", "Snezhanna", "Abdulha", "David H", 
-    "Alexandra", "Andrés", "Andrea C", "Andrea S", "Gabriela", "Gabi", "Amr", "Anya", "Armando", 
-    "Berta", "Franco", "Jael", "Joan", "Jose Miguel", "Leah", "Martín", "Solomon", "Sergio", 
-    "Thierno"]
+    participantsList = participantsList2()
+    getUl.innerHTML = ""
+    for (let i = 0; i < participantsList.length; i++){
+        getUl.innerHTML += `<li>${participantsList[i]}</li>`
+    }
+    console.log(participantsList)
 }
-
