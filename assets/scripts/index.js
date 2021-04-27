@@ -77,15 +77,21 @@ getInput.addEventListener('keydown', function getInputValue(event) {
     let key = event.keyCode || event.which
     if (key === 13){
         let inputValue = getInput.value
-        addNameToList()
-        return inputValue + ev
+        /* addNameToList()
+        return inputValue */
+        participantsList.push(inputValue)
+        console.log(participantsList)
+        getUl.innerHTML = ""
+        for (let i = 0; i < participantsList.length; i++){
+            getUl.innerHTML += `<li>${participantsList[i]}</li>`
+        }
     }
 })
 
-function addNameToList() {
+/* function addNameToList() {
     console.log(getInputValue())
     participantsList.push(inputValue)
-}
+} */
 
 function soundCannon() {
     var audio = document.getElementById("audio")

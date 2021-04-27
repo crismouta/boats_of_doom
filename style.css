@@ -8,13 +8,19 @@ h1 {
 }
 
 .title {
+    padding: 60px;
     display: flex;
     align-items: center;
 }
 
 .logo {
-    width: 10%;
+    width: 20%;
 }
+
+header {
+    width: 60%;
+}
+
 .header-title {
     color: hsl(34, 24%, 51%);
     font-size: 65px;
@@ -42,9 +48,9 @@ h1 {
 }
 
 .inputContainer {
-    position: relative;
-    top: 0;
-    right: -78%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
     background-color: hsla(34, 24%, 51%, 0.767);
     width: 20vw;
     height: 21vw;
