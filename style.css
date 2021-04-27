@@ -26,6 +26,7 @@ header {
     font-size: 65px;
     margin: 25px;
     font-family: 'Treasure Map Deadhand';
+    -webkit-text-stroke: 1.5px #504535;
 }
 
 .container{
