@@ -7,9 +7,17 @@ h1 {
     margin: 0;
 }
 
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 10%;
+}
 .header-title {
     color: hsl(34, 24%, 51%);
-    font-size: 50px;
+    font-size: 65px;
     margin: 25px;
 }
 
@@ -25,17 +33,22 @@ h1 {
 
 .result{
     position: absolute;
+    width: 170px;
+    text-align: center;
+    font-size: 35px;
+    color: red;
     left: 35%;
     bottom: 180px;
 }
 
 .inputContainer {
     position: relative;
-    top: -50px;
-    right: -65%;
+    top: -14%;
+    right: -78%;
     background-color: hsla(34, 24%, 51%, 0.767);
     width: 20vw;
-    height: 20vw;
+    height: 21vw;
+    box-sizing: border-box;
 }
 
 .inputBox {
@@ -48,7 +61,7 @@ h1 {
 .textInput {
     border: none;
     height: 25px;
-    width: 65%;
+    width: 12vw;
     top: 12px;
     position: absolute;
     left: 7.5%;
@@ -57,11 +70,24 @@ h1 {
     margin-top: 3px;
 }
 
+.listBox {
+    margin-top: 20px;
+    height: 220px;
+    overflow: auto;
+}
+
+.listName{
+    list-style-type: none;
+    font-size: 20px;
+    color: white;
+}
+
 .cannonBlock {
     left: 20px;
     position: absolute;
     left: 4%;
     bottom: 4%;
+    cursor: pointer;
 }
 
 .cannon {
@@ -155,6 +181,8 @@ h1 {
     padding: 8px;
     font-size: 15px;
 }
+
+
 
 /* @media (max-width:375px) {
 

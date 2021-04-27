@@ -18,11 +18,14 @@ for (let index = 0; index < participantsList.length; index++) {
 
 const cannonButton = document.querySelector(".cannon")
 
+cannonButton.onclick = functionPack
+
 function functionPack() {
     getRandomName(participantsList)
     fireBoat()
     deleteName(participantsList)
     consolelog()
+    soundCannon()
 }
 
 function fireBoat() {
@@ -51,7 +54,7 @@ function consolelog() {
     console.log(participantsList)
 }
 
-cannonButton.onclick = functionPack
+
 
 let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
@@ -63,4 +66,12 @@ function functionReset() {
         getUl.innerHTML += `<li>${genesisList[i]}</li>`
     }
     console.log(participantsList)
+}
+
+
+
+function soundCannon() {
+    var audio = document.getElementById("audio")
+    if (audio.paused) audio.play()
+    else audio.pause()
 }
