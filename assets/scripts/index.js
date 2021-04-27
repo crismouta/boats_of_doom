@@ -1,5 +1,4 @@
 import { participantsList2 } from './participants.js'
-const genesisList = participantsList2()
 let participantsList = participantsList2()
 
 /*suma()
@@ -54,15 +53,14 @@ function consolelog() {
 
 cannonButton.onclick = functionPack
 
-
 let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
 
 function functionReset() {
-    participantsList = genesisList
+    participantsList = participantsList2()
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
+    console.log(participantsList)
 }
-
