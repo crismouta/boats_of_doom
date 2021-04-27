@@ -9,24 +9,24 @@ function functionPack() {
     consolelog()
 }
 
-function getRandomName(lista) {
-    let randomValue = Math.floor(Math.random() * lista.length)
+function getRandomName(participantsList) {
+    let randomValue = Math.floor(Math.random() * participantsList.length)
     const geth2 = document.querySelector(".result")
     geth2.innerHTML = ""
-    geth2.innerHTML = `${lista[randomValue]}`
-    lista.splice(randomValue, 1)
+    geth2.innerHTML = `${participantsList[randomValue]}`
+    participantsList.splice(randomValue, 1)
 }
 
 //let getRandomName = Math.floor(Math.random() * participantsList.length)
 
-function printRandomName() {
+function printRandomName(name , image) {
     const geth2 = document.querySelector(".result")
     geth2.innerHTML = ""
     geth2.innerHTML = `${participantsList[getRandomName()]}`
 }
 
 function deleteName() {
-    participantsList.splice(getRandomName(), 1)
+    participantsList.splice(getRandomName(name , image), 1)
 }
 
 function consolelog() {
