@@ -1,5 +1,5 @@
-import { participantsList2 } from './participants.js'
-let participantsList = participantsList2()
+import { genesisList } from './participants.js'
+let participantsList = genesisList()
 
 /*suma()
 function suma() {
@@ -57,10 +57,28 @@ let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
 
 function functionReset() {
-    participantsList = participantsList2()
+    participantsList = genesisList()
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
     console.log(participantsList)
+}
+
+
+// Selecciona el input, le añade un Event Listener que recoja el valor del input 
+// sólo cuando se presione Enter (13)
+let getInput = document.querySelector(".textInput")
+getInput.addEventListener('keydown', function getInputValue(event) {
+    let key = event.keyCode || event.which
+    if (key === 13){
+        let inputValue = getInput.value
+        addNameToList()
+        return inputValue + ev
+    }
+})
+
+function addNameToList() {
+    console.log(getInputValue())
+    participantsList.push(inputValue)
 }
