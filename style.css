@@ -19,6 +19,7 @@ h1 {
     color: hsl(34, 24%, 51%);
     font-size: 65px;
     margin: 25px;
+    font-family: 'Treasure Map Deadhand';
 }
 
 .container{
@@ -83,7 +84,6 @@ h1 {
 }
 
 .cannonBlock {
-    left: 20px;
     position: absolute;
     left: 4%;
     bottom: 4%;
