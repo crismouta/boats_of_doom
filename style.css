@@ -94,6 +94,7 @@ h1 {
     z-index: 2;
     width: 20%;
     transition: transform 0.1s;
+    cursor: pointer;
 }
 
 .cannon:active{
@@ -180,6 +181,7 @@ h1 {
     border-style: none;
     padding: 8px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 
