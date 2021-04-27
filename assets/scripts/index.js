@@ -1,5 +1,4 @@
 import { participantsList2 } from './participants.js'
-const genesisList = participantsList2()
 let participantsList = participantsList2()
 
 /*suma()
@@ -19,11 +18,14 @@ for (let index = 0; index < participantsList.length; index++) {
 
 const cannonButton = document.querySelector(".cannon")
 
+cannonButton.onclick = functionPack
+
 function functionPack() {
     getRandomName(participantsList)
     fireBoat()
     deleteName(participantsList)
     consolelog()
+    soundCannon()
 }
 
 function fireBoat() {
@@ -52,14 +54,13 @@ function consolelog() {
     console.log(participantsList)
 }
 
-cannonButton.onclick = functionPack
 
 
 let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
 
 function functionReset() {
-    participantsList = genesisList
+    participantsList = participantsList2()
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
@@ -67,3 +68,10 @@ function functionReset() {
     console.log(participantsList)
 }
 
+
+
+function soundCannon() {
+    var audio = document.getElementById("audio")
+    if (audio.paused) audio.play()
+    else audio.pause()
+}
