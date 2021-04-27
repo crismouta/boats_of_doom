@@ -64,6 +64,5 @@ function functionReset() {
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
-    console.log(participantsList)
 }
 
