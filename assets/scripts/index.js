@@ -61,9 +61,9 @@ getResetButton.onclick = functionReset
 function functionReset() {
     participantsList = genesisList
     getUl.innerHTML = ""
-    for (let i = 0; i < participantsList.length; i++){
-        getUl.innerHTML += `<li>${participantsList[i]}</li>`
+    for (let i = 0; i < genesisList.length; i++){
+        getUl.innerHTML += `<li>${genesisList[i]}</li>`
     }
-    console.log(participantsList)
+    console.log("hola")
 }
 
