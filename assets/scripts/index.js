@@ -1,5 +1,5 @@
-import { participantsList2 } from './participants.js'
-let participantsList = participantsList2()
+import { genesisList } from './participants.js'
+let participantsList = genesisList()
 
 /*suma()
 function suma() {
@@ -38,8 +38,8 @@ function getRandomName(lista) {
     return randomValue
 }
 
+const geth2 = document.querySelector(".result")
 function deleteName(lista) {
-    const geth2 = document.querySelector(".result")
     const randomValue = getRandomName(lista)
     geth2.innerHTML = ""
     geth2.innerHTML = `${lista[randomValue]}`
@@ -60,15 +60,38 @@ let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
 
 function functionReset() {
-    participantsList = participantsList2()
+    participantsList = genesisList()
     getUl.innerHTML = ""
-    for (let i = 0; i < participantsList.length; i++){
-        getUl.innerHTML += `<li>${participantsList[i]}</li>`
+    for (let i = 0; i < genesisList.length; i++){
+        getUl.innerHTML += `<li>${genesisList[i]}</li>`
     }
     console.log(participantsList)
+    geth2.innerHTML = ""
 }
 
 
+// Selecciona el input, le añade un Event Listener que recoja el valor del input 
+// sólo cuando se presione Enter (13)
+let getInput = document.querySelector(".textInput")
+getInput.addEventListener('keydown', function getInputValue(event) {
+    let key = event.keyCode || event.which
+    if (key === 13){
+        let inputValue = getInput.value
+        /* addNameToList()
+        return inputValue */
+        participantsList.push(inputValue)
+        console.log(participantsList)
+        getUl.innerHTML = ""
+        for (let i = 0; i < participantsList.length; i++){
+            getUl.innerHTML += `<li>${participantsList[i]}</li>`
+        }
+    }
+})
+
+/* function addNameToList() {
+    console.log(getInputValue())
+    participantsList.push(inputValue)
+} */
 
 function soundCannon() {
     var audio = document.getElementById("audio")
