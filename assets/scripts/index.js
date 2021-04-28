@@ -22,15 +22,22 @@ cannonButton.onclick = functionPack
 
 function functionPack() {
     getRandomName(participantsList)
-    fireBoat()
-    deleteName(participantsList)
-    consolelog()
     soundCannon()
+    printName(participantsList)
+    setTimeout(fireBoat, 1500)
+    setTimeout(removeFire, 8500)
+    consolelog()
+    
 }
 
+let getBoat = document.querySelector(".boat2")
 function fireBoat() {
-    let getBoat = document.querySelector(".boat2")
     getBoat.src = "./assets/img/fireboat.png"
+    
+}
+
+function removeFire() {
+    getBoat.src = "./assets/img/boat.png"
 }
 
 function getRandomName(lista) {
@@ -39,22 +46,21 @@ function getRandomName(lista) {
 }
 
 const geth2 = document.querySelector(".result")
-function deleteName(lista) {
+function printName(lista) {
     const randomValue = getRandomName(lista)
     geth2.innerHTML = ""
-    geth2.innerHTML = `${lista[randomValue]}`
-    lista.splice(randomValue, 1)
-    getUl.innerHTML = ""
-    for (let i = 0; i < lista.length; i++){
+    setTimeout(() => {
+        geth2.innerHTML = `${lista[randomValue]}`
+        lista.splice(randomValue, 1)
+        getUl.innerHTML = ""
+        for (let i = 0; i < lista.length; i++){
         getUl.innerHTML += `<li>${lista[i]}</li>`
-    }
+    }}, 1500);
 }
 
 function consolelog() {
     console.log(participantsList)
 }
-
-
 
 let getResetButton = document.getElementById('reset')
 getResetButton.onclick = functionReset
@@ -62,13 +68,13 @@ getResetButton.onclick = functionReset
 function functionReset() {
     participantsList = genesisList()
     getUl.innerHTML = ""
-    for (let i = 0; i < genesisList.length; i++){
-        getUl.innerHTML += `<li>${genesisList[i]}</li>`
+    for (let i = 0; i < participantsList.length; i++){
+        getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
     console.log(participantsList)
     geth2.innerHTML = ""
+    getBoat.src = "./assets/img/boat.png"
 }
-
 
 // Selecciona el input, le añade un Event Listener que recoja el valor del input 
 // sólo cuando se presione Enter (13)
@@ -77,21 +83,18 @@ getInput.addEventListener('keydown', function getInputValue(event) {
     let key = event.keyCode || event.which
     if (key === 13){
         let inputValue = getInput.value
-        /* addNameToList()
-        return inputValue */
-        participantsList.push(inputValue)
-        console.log(participantsList)
-        getUl.innerHTML = ""
-        for (let i = 0; i < participantsList.length; i++){
-            getUl.innerHTML += `<li>${participantsList[i]}</li>`
-        }
+        addNameToList(inputValue)
     }
 })
 
-/* function addNameToList() {
-    console.log(getInputValue())
+function addNameToList(inputValue) {
     participantsList.push(inputValue)
-} */
+    console.log(participantsList)
+    getUl.innerHTML = ""
+    for (let i = 0; i < participantsList.length; i++){
+            getUl.innerHTML += `<li>${participantsList[i]}</li>`
+    }
+}
 
 function soundCannon() {
     var audio = document.getElementById("audio")
