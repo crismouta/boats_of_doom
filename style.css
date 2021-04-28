@@ -26,8 +26,7 @@ header {
     color: hsl(34, 24%, 51%);
     font-size: 65px;
     margin: 25px;
-    font-family: 'Pirata One', sans-serif;
-    -webkit-text-stroke: 0.5px #504535;
+    -webkit-text-stroke: 0.8px #504535;
 }
 
 .container{
@@ -80,7 +79,6 @@ header {
 }
 
 .listBox {
-    margin-top: 20px;
     height: 220px;
     overflow: auto;
 }
