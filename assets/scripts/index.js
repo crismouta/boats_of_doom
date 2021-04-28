@@ -1,5 +1,8 @@
-import { genesisList } from './participants.js'
+import { genesisDeadList, genesisList } from './participants.js'
+ //import { genesisDeadList } from './participants.js'
 let participantsList = genesisList()
+let deadList = genesisDeadList()
+
 
 /*suma()
 function suma() {
@@ -27,7 +30,8 @@ function functionPack() {
     setTimeout(fireBoat, 1500)
     setTimeout(resetBoat, 8500)
     consolelog()
-    
+    setTimeout(addToDeadList, 1500)
+   
 }
 
 let getBoat = document.querySelector(".boat2")
@@ -50,13 +54,29 @@ const geth2 = document.querySelector(".result")
 function printName(lista) {
     const randomValue = getRandomName(lista)
     geth2.innerHTML = ""
+    let participantName =`${lista[randomValue]}`
     setTimeout(() => {
-        geth2.innerHTML = `${lista[randomValue]}`
+        let participantName =`${lista[randomValue]}`
+        geth2.innerHTML = participantName
         lista.splice(randomValue, 1)
         getUl.innerHTML = ""
         for (let i = 0; i < lista.length; i++){
         getUl.innerHTML += `<li>${lista[i]}</li>`
     }}, 1500);
+
+    return participantName
+}
+let getdeadul= document.querySelector(".deadList")
+
+
+function addToDeadList(){
+
+    deadList.unshift(printName(participantsList))
+    console.log(deadList)
+    getdeadul.innerHTML = ""
+    for (let i = 0; i < deadList.length; i++){
+        getdeadul.innerHTML += `<li>${deadList[i]}</li>`
+    }
 }
 
 function consolelog() {
@@ -89,7 +109,7 @@ getInput.addEventListener('keydown', function getInputValue(event) {
 })
 
 function addNameToList(inputValue) {
-    participantsList.push(inputValue)
+    participantsList.unshift(inputValue)
     console.log(participantsList)
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
