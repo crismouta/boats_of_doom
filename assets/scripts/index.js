@@ -25,7 +25,7 @@ function functionPack() {
     soundCannon()
     printName(participantsList)
     setTimeout(fireBoat, 1500)
-    setTimeout(removeFire, 8500)
+    setTimeout(resetBoat, 8500)
     consolelog()
     
 }
@@ -36,8 +36,9 @@ function fireBoat() {
     
 }
 
-function removeFire() {
+function resetBoat() {
     getBoat.src = "./assets/img/boat.png"
+    geth2.innerHTML = ""
 }
 
 function getRandomName(lista) {
@@ -73,7 +74,7 @@ function functionReset() {
     }
     console.log(participantsList)
     geth2.innerHTML = ""
-    getBoat.src = "./assets/img/boat.png"
+    resetBoat()
 }
 
 // Selecciona el input, le añade un Event Listener que recoja el valor del input 

@@ -1,6 +1,7 @@
 body{
     overflow: hidden;
     margin: 0;
+    font-family: "Pirata One", sans-serif;
 }
 
 h1 {
@@ -25,8 +26,8 @@ header {
     color: hsl(34, 24%, 51%);
     font-size: 65px;
     margin: 25px;
-    font-family: 'Treasure Map Deadhand';
-    -webkit-text-stroke: 1.5px #504535;
+    font-family: 'Pirata One', sans-serif;
+    -webkit-text-stroke: 0.5px #504535;
 }
 
 .container{
