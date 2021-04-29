@@ -1,104 +1,59 @@
-import { genesisList } from './participants.js'
-let participantsList = genesisList()
+import { genesisDeadList, genesisList } from './participants.js';
+let participantsList = genesisList();
+let deadList = genesisDeadList();
 
-/*suma()
-function suma() {
-    let letras = 'abc'
-    let numeros = 4 + 10
-    return letras + ' Hola me llamo David ' + numeros
-}
-console.log(suma())
+const cannonButton = document.querySelector(".cannon");
+const geth2 = document.querySelector(".result");
 
-document.querySelector(".header-title").innerHTML = suma()*/
 
-let getUl = document.querySelector(".listName")
-for (let index = 0; index < participantsList.length; index++) {
-    getUl.innerHTML += `<li>${participantsList[index]}</li>`
-}
-
-const cannonButton = document.querySelector(".cannon")
-
-cannonButton.onclick = functionPack
+cannonButton.onclick = functionPack;
 
 function functionPack() {
-    getRandomName(participantsList)
-    soundCannon()
-    printName(participantsList)
-    setTimeout(fireBoat, 1500)
-    setTimeout(resetBoat, 8500)
-    consolelog()
-    
+    cannonSound();
+    getRandomName();
+    setTimeout(printName, 1500);
+    setTimeout(removeFromAliveList, 1500);
 }
 
-let getBoat = document.querySelector(".boat2")
-function fireBoat() {
-    getBoat.src = "./assets/img/fireboat.png"
-    
+// Sonido del cañón
+function cannonSound() {
+    let audio = document.getElementById("audio");
+    if (audio.paused) {
+        audio.play();
+    }  
 }
 
-function resetBoat() {
-    getBoat.src = "./assets/img/boat.png"
-    geth2.innerHTML = ""
+// Elegir un valor aleatorio del array al dar click al cañón
+function getRandomName() {
+    let randomName = participantsList[Math.floor(Math.random() * participantsList.length)];
+    return randomName;
 }
 
-function getRandomName(lista) {
-    let randomValue = Math.floor(Math.random() * lista.length)
-    return randomValue
-}
-
-const geth2 = document.querySelector(".result")
-function printName(lista) {
-    const randomValue = getRandomName(lista)
-    geth2.innerHTML = ""
-    setTimeout(() => {
+// Imprimir el nombre en el H2 al darle al boton del cañón
+function printName() {
+    const useRandomName = getRandomName();
+    console.log(useRandomName);
+    geth2.innerHTML = useRandomName;
+    return useRandomName;
+    /* setTimeout(() => {
         geth2.innerHTML = `${lista[randomValue]}`
         lista.splice(randomValue, 1)
         getUl.innerHTML = ""
         for (let i = 0; i < lista.length; i++){
         getUl.innerHTML += `<li>${lista[i]}</li>`
-    }}, 1500);
+    }}, 1500); */
 }
 
-function consolelog() {
-    console.log(participantsList)
+// Eliminar el nombre de la lista de vivos y del array
+function removeFromAliveList() {
+    participantsList.splice(printName(), 1);
+    console.log(participantsList);
 }
 
-let getResetButton = document.getElementById('reset')
-getResetButton.onclick = functionReset
+// Añadir el nombre a la lista de muertos y al array
 
-function functionReset() {
-    participantsList = genesisList()
-    getUl.innerHTML = ""
-    for (let i = 0; i < participantsList.length; i++){
-        getUl.innerHTML += `<li>${participantsList[i]}</li>`
-    }
-    console.log(participantsList)
-    geth2.innerHTML = ""
-    resetBoat()
-}
+// Hacer que el barco arda durante un tiempo cuando el nombre sea elegido
 
-// Selecciona el input, le añade un Event Listener que recoja el valor del input 
-// sólo cuando se presione Enter (13)
-let getInput = document.querySelector(".textInput")
-getInput.addEventListener('keydown', function getInputValue(event) {
-    let key = event.keyCode || event.which
-    if (key === 13){
-        let inputValue = getInput.value
-        addNameToList(inputValue)
-    }
-})
+// Añadir a la lista de vivos el nombre introducido en el input
 
-function addNameToList(inputValue) {
-    participantsList.push(inputValue)
-    console.log(participantsList)
-    getUl.innerHTML = ""
-    for (let i = 0; i < participantsList.length; i++){
-            getUl.innerHTML += `<li>${participantsList[i]}</li>`
-    }
-}
-
-function soundCannon() {
-    var audio = document.getElementById("audio")
-    if (audio.paused) audio.play()
-    else audio.pause()
-}
+// Resetear la lista de participantes al darle al boton de Reset, y vaciar la lista de muertos
