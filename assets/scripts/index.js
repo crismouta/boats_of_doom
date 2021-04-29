@@ -8,12 +8,6 @@ for (let index = 0; index < participantsList.length; index++) {
     getUl.innerHTML += `<li>${participantsList[index]}</li>`
 }
 
-let macarrones = 'hola'
-console.log(macarrones)
-
-macarrones = 'adios'
-
-
 const cannonButton = document.querySelector(".cannon")
 
 cannonButton.onclick = functionPack
