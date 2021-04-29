@@ -20,6 +20,7 @@ function functionPack() {
     setTimeout(resetBoat, 8500)
     setTimeout(removeFromList, 1500)
     setTimeout(addToDeadList, 1500)
+    /* setTimeout(printName2, 1500) */
 }
 
 let getBoat = document.querySelector(".boat2")
@@ -43,13 +44,15 @@ function printName() {
     const randomName = getRandomName()
     geth2.innerHTML = ""
     let participantName = `${participantsList[randomName]}`
-
-    setTimeout(() => { geth2.innerHTML = participantName }, 1500);
-
-    return {
+    setTimeout(printName2(participantName), 1500)
+    /* return {
         name: randomName,
         participant: participantName
-    }
+    } */
+}
+
+function printName2() {
+    geth2.innerHTML = participantName
 }
 
 function removeFromList() {
