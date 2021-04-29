@@ -18,8 +18,9 @@ function functionPack() {
     printName()
     setTimeout(fireBoat, 1500)
     setTimeout(resetBoat, 8500)
-    setTimeout(removeFromList, 1500)
     setTimeout(addToDeadList, 1500)
+    setTimeout(removeFromList, 1500)
+    
 }
 
 let getBoat = document.querySelector(".boat2")
@@ -53,9 +54,9 @@ function printName() {
 }
 
 function removeFromList() {
-    participantsList.splice(printName.name, 1)
+    participantsList.splice(addToDeadList(), 1)
     getUl.innerHTML = ""
-
+    console.log(participantsList)
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
@@ -67,11 +68,11 @@ function addToDeadList(){
     let qwert = printName().participant
     deadList.unshift(qwert)
     geth2.innerHTML = qwert
-    console.log(deadList)
     getDeadUL.innerHTML = ""
     for (let i = 0; i < deadList.length; i++){
         getDeadUL.innerHTML += `<li>${deadList[i]}</li>`
     }
+    return qwert
 }
 
 let getResetButton = document.getElementById('reset')
@@ -80,12 +81,12 @@ getResetButton.onclick = functionReset
 function functionReset() {
     participantsList = genesisList()
     deadList = genesisDeadList()
-    getDeadUL = ""
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
     console.log(participantsList, deadList)
+    getDeadUL.innerHTML = ""
     geth2.innerHTML = ""
     resetBoat()
 }
