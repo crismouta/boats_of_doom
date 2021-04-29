@@ -3,35 +3,29 @@ import { genesisDeadList, genesisList } from './participants.js'
 let participantsList = genesisList()
 let deadList = genesisDeadList()
 
-
-/*suma()
-function suma() {
-    let letras = 'abc'
-    let numeros = 4 + 10
-    return letras + ' Hola me llamo David ' + numeros
-}
-console.log(suma())
-
-document.querySelector(".header-title").innerHTML = suma()*/
-
 let getUl = document.querySelector(".listName")
 for (let index = 0; index < participantsList.length; index++) {
     getUl.innerHTML += `<li>${participantsList[index]}</li>`
 }
+
+let macarrones = 'hola'
+console.log(macarrones)
+
+macarrones = 'adios'
+
 
 const cannonButton = document.querySelector(".cannon")
 
 cannonButton.onclick = functionPack
 
 function functionPack() {
-    getRandomName(participantsList)
+    getRandomName()
     soundCannon()
-    printName(participantsList)
+    printName()
     setTimeout(fireBoat, 1500)
     setTimeout(resetBoat, 8500)
-    consolelog()
+    setTimeout(removeFromList, 1500)
     setTimeout(addToDeadList, 1500)
-   
 }
 
 let getBoat = document.querySelector(".boat2")
@@ -45,42 +39,47 @@ function resetBoat() {
     geth2.innerHTML = ""
 }
 
-function getRandomName(lista) {
-    let randomValue = Math.floor(Math.random() * lista.length)
+function getRandomName() {
+    let randomValue = Math.floor(Math.random() * participantsList.length)
     return randomValue
 }
 
 const geth2 = document.querySelector(".result")
-function printName(lista) {
-    const randomValue = getRandomName(lista)
+function printName() {
+    const randomName = getRandomName()
     geth2.innerHTML = ""
-    let participantName =`${lista[randomValue]}`
-    setTimeout(() => {
-        let participantName =`${lista[randomValue]}`
-        geth2.innerHTML = participantName
-        lista.splice(randomValue, 1)
-        getUl.innerHTML = ""
-        for (let i = 0; i < lista.length; i++){
-        getUl.innerHTML += `<li>${lista[i]}</li>`
-    }}, 1500);
+    let participantName = `${participantsList[randomName]}`
 
-    return participantName
+    setTimeout(() => { geth2.innerHTML = participantName }, 1500);
+
+    return {
+        name: randomName,
+        participant: participantName
+    }
 }
-let getdeadul= document.querySelector(".deadList")
 
+function removeFromList() {
+    participantsList.splice(printName.name, 1)
+    getUl.innerHTML = ""
+
+    for (let i = 0; i < participantsList.length; i++){
+        getUl.innerHTML += `<li>${participantsList[i]}</li>`
+    }
+}
+
+let getDeadUL = document.querySelector(".deadList")
 
 function addToDeadList(){
-
-    deadList.unshift(printName(participantsList))
+    deadList.unshift(printName().participant)
     console.log(deadList)
-    getdeadul.innerHTML = ""
+    getDeadUL.innerHTML = ""
     for (let i = 0; i < deadList.length; i++){
-        getdeadul.innerHTML += `<li>${deadList[i]}</li>`
+        getDeadUL.innerHTML += `<li>${deadList[i]}</li>`
     }
 }
 
 function consolelog() {
-    console.log(participantsList)
+    console.log(deadList)
 }
 
 let getResetButton = document.getElementById('reset')
@@ -88,11 +87,13 @@ getResetButton.onclick = functionReset
 
 function functionReset() {
     participantsList = genesisList()
+    deadList = genesisDeadList()
+    getDeadUL = ""
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
         getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
-    console.log(participantsList)
+    console.log(participantsList, deadList)
     geth2.innerHTML = ""
     resetBoat()
 }
@@ -113,12 +114,14 @@ function addNameToList(inputValue) {
     console.log(participantsList)
     getUl.innerHTML = ""
     for (let i = 0; i < participantsList.length; i++){
-            getUl.innerHTML += `<li>${participantsList[i]}</li>`
+        getUl.innerHTML += `<li>${participantsList[i]}</li>`
     }
+    getInput.value = ""
 }
 
 function soundCannon() {
     var audio = document.getElementById("audio")
-    if (audio.paused) audio.play()
-    else audio.pause()
+    if (audio.paused) {
+        audio.play()
+    }
 }
