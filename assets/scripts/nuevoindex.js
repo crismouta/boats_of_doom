@@ -32,6 +32,7 @@ function getRandomName() {
 // Imprimir el nombre en el H2 al darle al boton del cañón
 function printName() {
     const useRandomName = getRandomName();
+    console.log(useRandomName);
     geth2.innerHTML = useRandomName;
     removeFromAliveList(useRandomName);
     /* setTimeout(() => {
