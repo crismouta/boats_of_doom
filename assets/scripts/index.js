@@ -31,7 +31,7 @@ function functionPack() {
     setTimeout(resetBoat, 8500)
     consolelog()
     setTimeout(addToDeadList, 1500)
-   
+
 }
 
 let getBoat = document.querySelector(".boat2")
@@ -70,13 +70,13 @@ let getdeadul= document.querySelector(".deadList")
 
 
 function addToDeadList(){
-
     deadList.unshift(printName(participantsList))
     console.log(deadList)
-    getdeadul.innerHTML = ""
-    for (let i = 0; i < deadList.length; i++){
+    setTimeout(() => {
+        getdeadul.innerHTML = ""
+        for (let i = 0; i < deadList.length; i++){
         getdeadul.innerHTML += `<li>${deadList[i]}</li>`
-    }
+    }}, 2000);
 }
 
 function consolelog() {
