@@ -9,7 +9,7 @@ h1 {
 }
 
 .title {
-    padding: 60px;
+    padding: 20px;
     display: flex;
     align-items: center;
 }
@@ -43,7 +43,7 @@ header {
     position: absolute;
     width: 170px;
     text-align: center;
-    font-size: 53px;
+    font-size: 33px;
     color: red;
     -webkit-text-stroke: 0.8px black;
     left: 35%;
