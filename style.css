@@ -43,8 +43,9 @@ header {
     position: absolute;
     width: 170px;
     text-align: center;
-    font-size: 35px;
+    font-size: 53px;
     color: red;
+    -webkit-text-stroke: 0.8px black;
     left: 35%;
     bottom: 180px;
 }

@@ -21,7 +21,7 @@ for (let i = 0; i < participantsList.length; i++) {
 function runFunctions() {
     cannonSound()
     setTimeout(getRandomValue, 1500)
-    setTimeout(fireBoat, 1500)
+    setTimeout(burnBoat, 1500)
     setTimeout(resetBoat, 8500)
 }
 
@@ -74,7 +74,7 @@ function addToDeadList(chosenParticipant) {
 }
 
 // Hacer que el barco arda durante un tiempo cuando el nombre sea elegido
-function fireBoat() {
+function burnBoat() {
     getBoat.src = "./assets/img/fireboat.png"
 }
 
@@ -84,7 +84,7 @@ function resetBoat() {
 }
 
 // Añadir a la lista de vivos el nombre introducido en el input
-getTextInput.addEventListener('keydown', function getInputValue(event) {
+getTextInput.addEventListener('keydown', (event) => {
     let key = event.keyCode || event.which
 
     if (key === 13){
