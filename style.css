@@ -81,12 +81,19 @@ header {
 .listBox {
     height: 220px;
     overflow: auto;
+    display: flex;
 }
 
-.listName{
+.listName {
     list-style-type: none;
     font-size: 20px;
     color: white;
+}
+
+.deadList {
+    list-style-type: none;
+    font-size: 20px;
+    color: red;
 }
 
 .cannonBlock {
